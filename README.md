@@ -1,5 +1,4 @@
 # Faster_Mask_RCNN
----
 
 ### pytorch obeject detection finetuning tutorial
 
@@ -44,7 +43,7 @@
 
   - import 수정 
 
-2. 1) faster_rcnn.py 수정
+  ###### faster_rcnn.py 수정
   ~~~python
   ...
   # 17 line
@@ -68,7 +67,7 @@
       return model
   ~~~
 
-2. 2) mask_rcnn.py 수정
+  ###### mask_rcnn.py 수정
   ~~~python
 
   ...
@@ -93,7 +92,7 @@
 
   ~~~
 
-2. 3) detection의 import수정( coco_eval.py, coco_utils.py, engine.py, presets.py, train.py )
+  ###### detection의 import수정( coco_eval.py, coco_utils.py, engine.py, presets.py, train.py )
   ```
     import utils => from . import utils
     import transforms as T => from . import transforms as T
