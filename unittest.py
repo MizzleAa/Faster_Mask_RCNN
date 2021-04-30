@@ -4,22 +4,26 @@ import unittest
 class TestPennFudan(unittest.TestCase):
 
     def test_file_to_list(self):
+        # give
         import os
         root = './'
         path = 'detection'
-
+        # then
         out = list(sorted(os.listdir(os.path.join(root, path))))
-
         print(f"test_file_to_list = {out}")
+        # when
         self.assertIsNotNone(out)
 
     def test_path_to_file(self):
         import os
+        # give
         root = './'
         path = 'detection'
         file = 'engine.py'
+        # then
         out = os.path.join(root, path, file)
         print(f"test_path_to_file = {out}")
+        # when
         self.assertIsNotNone(out)
 
     def output(self, params):
@@ -46,15 +50,18 @@ class TestPennFudan(unittest.TestCase):
         return data_loader, data_loader_test, dataset_test
 
     def test_output(self):
+        # give
         params = {
             'root': 'PennFudanPed',
             'imgs_path': 'PNGImages',
             'masks_path': 'PedMasks'
         }
+        # then
         data_loader, data_loader_test, dataset_test = self.output(
             params)
 
         print(f"test_output")
+        # when
         self.assertIsNotNone(data_loader)
         self.assertIsNotNone(data_loader_test)
         self.assertIsNotNone(dataset_test)
